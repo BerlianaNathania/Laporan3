@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum ke 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        .bg-soft-pink { background-color: #FFF5F7; }
+        .section-full { min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+        
+        /* Navbar Animation */
+        .navbar-hidden { transform: translateY(-100%); transition: transform 0.4s ease-in-out; }
+        .navbar-visible { transform: translateY(0); transition: transform 0.4s ease-in-out; }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fff; }
+        ::-webkit-scrollbar-thumb { background: #fbcfe8; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <nav id="main-nav" class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-pink-50 navbar-visible">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xl font-bold tracking-tighter text-gray-900">
+                NATHA<span class="text-pink-400">.</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#" class="text-xs font-bold uppercase tracking-widest hover:text-pink-400 transition-colors">Home</a>
+                <a href="#about" class="text-xs font-bold uppercase tracking-widest hover:text-pink-400 transition-colors">About</a>
+                <a href="#biodata" class="text-xs font-bold uppercase tracking-widest hover:text-pink-400 transition-colors">Resume</a>
+                <a href="#experience" class="text-xs font-bold uppercase tracking-widest hover:text-pink-400 transition-colors">Journey</a>
+            </div>
+            <a href="mailto:saskia@email.com" class="px-6 py-2 bg-pink-400 text-white text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-pink-500 transition-all shadow-lg shadow-pink-100">
+                Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <section class="section-full bg-soft-pink px-6">
+        <div class="text-center" data-aos="fade-up" data-aos-duration="1500">
+            <span class="text-pink-400 tracking-[0.5em] uppercase text-xs mb-6 block font-bold">Portfolio 2025</span>
+            <h1 class="text-6xl md:text-9xl text-gray-900 mb-6 leading-tight">Creative<br>Visionary.</h1>
+            <p class="max-w-md mx-auto text-gray-500 leading-relaxed mb-12 text-lg">
+                Membantu brand menciptakan impresi visual yang tak terlupakan melalui desain minimalis dan elegan.
+            </p>
+            <a href="#about" class="inline-flex items-center justify-center w-14 h-14 rounded-full border border-pink-200 text-pink-300 hover:bg-pink-300 hover:text-white transition-all duration-500 animate-bounce">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="section-full bg-white px-6 md:px-24">
+        <div class="max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
+            <div class="relative" data-aos="fade-right">
+                <div class="aspect-[4/5] bg-soft-pink rounded-[2rem] overflow-hidden shadow-lg">
+    <img src="asset/img/natha.jpeg">" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-pink-50 rounded-full -z-10 shadow-xl" data-aos="zoom-in"></div>
+            </div>
+            
+            <div data-aos="fade-left">
+                <h3 class="text-pink-400 font-bold tracking-widest uppercase text-sm mb-4">About Me</h3>
+                <h2 class="text-5xl md:text-7xl text-gray-900 mb-8 leading-tight">Berlian & Natha</h2>
+                <p class="text-gray-600 text-xl leading-relaxed mb-8">
+                    Sebagai seorang desainer, saya percaya bahwa keindahan harus selaras dengan fungsi. Saya mendedikasikan waktu saya untuk mempelajari psikologi visual guna memberikan hasil kerja terbaik.
+                </p>
+                <div class="grid grid-cols-2 gap-8 mb-10">
+                    <div>
+                        <span class="block text-4xl font-bold text-gray-900">05+</span>
+                        <span class="text-xs uppercase tracking-widest text-pink-400 font-bold">Years Exp.</span>
+                    </div>
+                    <div>
+                        <span class="block text-4xl font-bold text-gray-900">120+</span>
+                        <span class="text-xs uppercase tracking-widest text-pink-400 font-bold">Global Clients</span>
+                    </div>
+                </div>
+                <a href="#biodata" class="text-gray-900 font-bold border-b-2 border-pink-300 pb-2 hover:text-pink-400 hover:border-pink-400 transition-all">
+                    View Complete CV <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <section id="biodata" class="section-full bg-soft-pink px-4 py-20">
+        <div class="max-w-5xl w-full bg-white shadow-[0_40px_80px_-15px_rgba(255,182,193,0.2)] rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row" data-aos="fade-up">
+            
+            <div class="lg:w-1/3 bg-[#FFF9FA] p-10 border-r border-pink-50">
+                <div class="text-center mb-10">
+                    <div class="w-40 h-40 bg-white rounded-full mx-auto mb-6 shadow-lg border-8 border-white overflow-hidden">
+    <img src="asset/img/natha.jpeg" alt="Profile" class="w-full h-full object-cover">
+</div>
+                    <h2 class="text-2xl font-bold text-gray-800">Berlian Natha</h2>
+                    <p class="text-pink-400 font-bold text-[10px] tracking-widest uppercase mt-2">Creative Designer</p>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4 border-b border-pink-100 pb-2">Data Pribadi</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex flex-col">
+                                <span class="text-gray-400 text-[10px] uppercase">Tempat, Tgl Lahir</span>
+                                <span class="font-semibold text-gray-700">Jakarta, 14 April 1998</span>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="text-gray-400 text-[10px] uppercase">Jenis Kelamin</span>
+                                <span class="font-semibold text-gray-700">Perempuan</span>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="text-gray-400 text-[10px] uppercase">Status</span>
+                                <span class="font-semibold text-gray-700">Lajang</span>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="text-gray-400 text-[10px] uppercase">Alamat</span>
+                                <span class="font-semibold text-gray-700 leading-tight">Jl. Melati No. 12, Kebayoran Baru, Jakarta Selatan</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4 border-b border-pink-100 pb-2">Kontak</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-sm">
+                                <i class="fa-solid fa-envelope text-pink-300 w-4"></i>
+                                <span class="text-gray-700">nanat@email.com</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm">
+                                <i class="fa-solid fa-phone text-pink-300 w-4"></i>
+                                <span class="text-gray-700">+62 812 3456 7890</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-2/3 p-10 md:p-14">
+                <div class="mb-12">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-address-card text-pink-300"></i> Profil Profesional
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Seorang desainer grafis yang berfokus pada estetika minimalis dan fungsionalitas UI/UX. Memiliki pengalaman lebih dari 5 tahun dalam mengelola proyek kreatif, mulai dari identitas brand hingga pengembangan desain aplikasi digital yang user-centric.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-pink-300"></i> Pendidikan
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="relative pl-5 border-l-2 border-pink-100">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-pink-200 border-4 border-white"></div>
+                                <h4 class="text-sm font-bold text-gray-800">Universitas Desain Indonesia</h4>
+                                <p class="text-[11px] text-pink-400 font-bold uppercase">S1 Desain Komunikasi Visual</p>
+                                <p class="text-[11px] text-gray-400">2016 - 2020 | IPK 3.80</p>
+                            </div>
+                            <div class="relative pl-5 border-l-2 border-pink-100">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-pink-100 border-4 border-white"></div>
+                                <h4 class="text-sm font-bold text-gray-800">SMA Negeri 1 Jakarta</h4>
+                                <p class="text-[11px] text-pink-400 font-bold uppercase">IPA (Ilmu Pengetahuan Alam)</p>
+                                <p class="text-[11px] text-gray-400">2013 - 2016</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-gears text-pink-300"></i> Keahlian
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-[10px] font-bold text-gray-500 uppercase mb-1">
+                                    <span>Design Tools</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-3 py-1 bg-pink-50 text-pink-400 rounded-full text-[10px] font-bold border border-pink-100">FIGMA</span>
+                                    <span class="px-3 py-1 bg-pink-50 text-pink-400 rounded-full text-[10px] font-bold border border-pink-100">ADOBE AI</span>
+                                    <span class="px-3 py-1 bg-pink-50 text-pink-400 rounded-full text-[10px] font-bold border border-pink-100">PHOTOSHOP</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-[10px] font-bold text-gray-500 uppercase mb-1">
+                                    <span>Bahasa</span>
+                                </div>
+                                <p class="text-sm text-gray-600 font-medium italic">Indonesia (Native), Inggris (Fluent)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-14 pt-8 border-t border-gray-50 flex gap-4">
+                    <button class="flex-1 bg-pink-400 hover:bg-pink-500 text-white py-3 rounded-xl font-bold text-xs transition-all shadow-md flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-download"></i> UNDUH CV
+                    </button>
+                    <button class="flex-1 border-2 border-pink-100 text-pink-300 hover:bg-pink-50 py-3 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> HUBUNGI SAYA
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-full bg-white px-6 py-20">
+        <div class="max-w-6xl w-full">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
+                <div>
+                    <span class="text-pink-400 font-bold tracking-[0.3em] uppercase text-xs mb-3 block">Career Journey</span>
+                    <h2 class="text-5xl md:text-7xl text-gray-900 leading-tight">Pengalaman &<br>Pencapaian.</h2>
+                </div>
+                <div class="hidden md:block pb-4">
+                    <div class="flex gap-2">
+                        <div class="w-12 h-1 bg-pink-100 rounded-full"></div>
+                        <div class="w-24 h-1 bg-pink-300 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="space-y-10" data-aos="fade-right">
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-pink-50 flex items-center justify-center text-pink-400 text-sm">01</span>
+                        Work Experience
+                    </h3>
+                    
+                    <div class="relative pl-8 border-l-2 border-pink-50 space-y-12">
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-0 w-5 h-5 rounded-full border-4 border-white bg-pink-300 shadow-sm"></div>
+                            <span class="text-xs font-bold text-pink-400 uppercase tracking-widest">2022 - Present</span>
+                            <h4 class="text-xl font-bold text-gray-900 mt-1">Senior UI Designer</h4>
+                            <p class="text-gray-400 text-sm mb-4">TechInnovate Solutions, Singapore (Remote)</p>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Memimpin tim desain dalam merancang sistem desain (Design System) untuk 3 aplikasi enterprise besar. Meningkatkan efisiensi kerja developer sebesar 40% melalui komponen yang terstandarisasi.
+                            </p>
+                        </div>
+
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-0 w-5 h-5 rounded-full border-4 border-white bg-pink-200 shadow-sm"></div>
+                            <span class="text-xs font-bold text-pink-400 uppercase tracking-widest">2020 - 2022</span>
+                            <h4 class="text-xl font-bold text-gray-900 mt-1">Visual Content Specialist</h4>
+                            <p class="text-gray-400 text-sm mb-4">Creative Agency Jakarta</p>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Bertanggung jawab atas visual branding untuk 50+ campaign digital klien nasional. Berkolaborasi dengan tim marketing untuk meningkatkan engagement media sosial rata-rata 25% per klien.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-10" data-aos="fade-left">
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-pink-50 flex items-center justify-center text-pink-400 text-sm">02</span>
+                        Major Achievements
+                    </h3>
+
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="p-6 rounded-[2rem] bg-soft-pink border border-pink-100 hover:shadow-xl hover:shadow-pink-50 transition-all group">
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-pink-300 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-trophy text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Top 10 Digital Artist 2023</h4>
+                                    <p class="text-xs text-gray-500 italic">Diberikan oleh Indonesia Creative Network atas inovasi desain minimalis.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 rounded-[2rem] bg-white border border-gray-100 hover:shadow-xl hover:shadow-pink-50 transition-all group">
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 rounded-2xl bg-pink-50 flex items-center justify-center text-pink-300 group-hover:scale-110 transition-transform">
+                                    <i class="fa-solid fa-star text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Speaker at UX Conf ID</h4>
+                                    <p class="text-xs text-gray-500 italic">Membawakan materi "The Psychology of Soft Colors in UI Design" di depan 500+ audiens.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <h4 class="text-xs font-black text-gray-400 uppercase tracking-[0.3em] mb-6">Personal Interests</h4>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 rounded-full text-sm text-gray-600 font-medium">
+                                <i class="fa-solid fa-camera text-pink-200"></i> Photography
+                            </div>
+                            <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 rounded-full text-sm text-gray-600 font-medium">
+                                <i class="fa-solid fa-paint-brush text-pink-200"></i> Abstract Art
+                            </div>
+                            <div class="flex items-center gap-3 px-5 py-3 bg-gray-50 rounded-full text-sm text-gray-600 font-medium">
+                                <i class="fa-solid fa-book text-pink-200"></i> Design Thinking
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-24 text-center" data-aos="zoom-in">
+                <p class="text-gray-400 text-sm mb-4">Tertarik untuk bekerja sama?</p>
+                <a href="mailto:NANAT@creative.com" class="text-2xl md:text-4xl font-serif text-gray-900 border-b-4 border-pink-200 hover:border-pink-400 transition-all">
+                    Let's Create Something Great.
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+       
+        AOS.init({
+            duration: 1000,
+            once: false, 
+            mirror: true, 
+            anchorPlacement: 'top-bottom'
+        });
+
+        
+        let lastScrollTop = 0;
+        const nav = document.getElementById('main-nav');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+               
+                nav.classList.remove('navbar-visible');
+                nav.classList.add('navbar-hidden');
+            } else {
+               
+                nav.classList.remove('navbar-hidden');
+                nav.classList.add('navbar-visible');
+            }
+            
+            // Background change on scroll
+            if (scrollTop > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, false);
+    </script>
+</body>
+</html>
